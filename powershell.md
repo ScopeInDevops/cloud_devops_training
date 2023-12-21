@@ -83,10 +83,23 @@ Syntax
 • $? - Contains the execution status of the last operation.     
 • $_ - Contains the current object in the pipeline
 
-### Variable
- $myVariable="Jack"  
- $myVariable.GetType()  
- [int]$myValue= 3
+### Array
+
+```
+$myArray+="test5"
+$myArray=$myArray-ne "test2"
+$myArray
+
+##########################################
+
+$myList=New-Object -TypeName System.Collections.ArrayList
+
+[void]$myList.Add("Test1")
+[void]$myList.Add("Test2")
+$myList.AddRange(@("Test3","Test4","Test5"))
+$myList.Remove("Test2")
+$myList
+
  
 
 
