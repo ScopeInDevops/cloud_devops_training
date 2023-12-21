@@ -127,6 +127,23 @@ $isMicrosoft3 = Test-MicrosoftEmail -EmailAddress $email3
 
 ```
 
+
+### ForEach Loop
+
+```
+foreach loop
+$filePath= "C:\Scripts\Data\FolderNames.txt"
+$foldersPath="C:\Scripts\Data"
+$folderNames=Get-Content -Path $filePath
+
+foreach($name in $folderNames){
+    if((Test-Path -Path "$foldersPath\$name")-eq $false){
+        New-Item -Path "$foldersPth" -Name $name-ItemType Directory
+    }else{
+        Write-Output "Folder exists"
+    }
+}
+```
  
 
 
