@@ -100,6 +100,33 @@ $myList.AddRange(@("Test3","Test4","Test5"))
 $myList.Remove("Test2")
 $myList
 
+```
+
+### Homework 1
+
+```
+function Test-MicrosoftEmail {
+    #mandatory parameter
+    param(
+        [string]$EmailAddress
+    )
+
+    $isMicrosoftEmail = $EmailAddress -like "*@microsoft.com"
+
+    return $isMicrosoftEmail
+}
+
+
+$email1 = "pratik.sapkota@gmail.com"
+$email2 = "pratik.sapkota@microsoft.com"
+$email3="amitkumarkushwaha445@gmail.com"
+
+$isMicrosoft1 = Test-MicrosoftEmail -EmailAddress $email1
+$isMicrosoft2 = Test-MicrosoftEmail -EmailAddress $email2
+$isMicrosoft3 = Test-MicrosoftEmail -EmailAddress $email3
+
+```
+
  
 
 
